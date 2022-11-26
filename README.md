@@ -1,5 +1,3 @@
-# passthrough-scripts
-
 This is a small collection of some of the libvirt hooks and automation scripts I've written for my primary VFIO virtual machine.
 
 ## Specs:
@@ -14,6 +12,13 @@ This is a small collection of some of the libvirt hooks and automation scripts I
 * GPU: NVIDIA GeForce RTX 2070 SUPER 
 * Memory: 32GB 
 * Using qemu-kvm (libvirt)
+* Single GPU passthrough
+
+## Passthrough items:
+* "Primary" GPU (single card system)
+* All (8) P-cores, E-cores are reserved for host and I/O
+* PCI audio controller + its IOMMU group
+* USB mouse and keyboard
 
 
 ## Notes:
