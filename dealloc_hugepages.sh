@@ -1,6 +1,4 @@
 #!/bin/bash
 
-## Load the config file
-source "/etc/libvirt/hooks/kvm.conf"
-
+# Free up our hugepages RAM
 echo 0 > /proc/sys/vm/nr_hugepages
