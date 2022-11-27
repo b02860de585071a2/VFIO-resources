@@ -9,7 +9,7 @@ This is a small collection of some of the libvirt hooks and automation scripts I
 * DE: none
 * DM: none
 * CPU: Intel i7-12700KF @ 5.0GHz 
-* GPU: NVIDIA GeForce RTX 2070 SUPER 
+* GPU: RTX 2070 Super 
 * Memory: 32GB 
 * Using qemu-kvm (libvirt)
 * Single GPU passthrough
