@@ -17,7 +17,7 @@ This is a small collection of some of the libvirt hooks and automation scripts I
 
 ## Passthrough items:
 * "Primary" GPU (single card system)
-* All (8) P-cores, E-cores are reserved for host and I/O
+* All P-cores, E-cores are reserved for host and I/O
 * PCI audio controller + its IOMMU group
 * USB mouse and keyboard
 
