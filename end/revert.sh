@@ -24,7 +24,7 @@ echo -e "[Service] \nExecStart= \nExecStart=-/sbin/agetty -o '-p -- [USERNAME]' 
 
 # Reload with our new parameters for when the VM starts next, launch a new X session (as me)
 systemctl daemon-reload
-su -l [USERNAME] -c startx
+sudo -u [USERNAME] -i startx
 
 # Make libvirt work again (if needed)
 #systemctl restart libvirtd.service
