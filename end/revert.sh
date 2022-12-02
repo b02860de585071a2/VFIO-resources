@@ -8,9 +8,6 @@ set -x
 # Rebind framebuffer (hopefully)
 echo efi-framebuffer.0 | sudo tee /sys/bus/platform/drivers/efi-framebuffer/bind
 
-# Restart Nvidia daemon
-systemctl restart nvidia-persistenced.service
-
 
 
 # Black screen fixes
@@ -25,6 +22,9 @@ mv "$GETTY_PATH/autologin.conf" "$GETTY_PATH/skip-username.conf"
 
 echo -e "[Service] \nExecStart= \nExecStart=-/sbin/agetty -o '-p -- [USERNAME]' --noclear --skip-login - \$TERM" > "$GETTY_PATH/skip-username.conf"
 
-# Reload with our new parameters for when the VM starts next, and launch an X session (as me)
-systemctl daemon-reload &&
-su [USERNAME] --session-command="startx > /dev/tty1"
+# Reload with our new parameters for when the VM starts next, launch a new X session (as me)
+systemctl daemon-reload
+su -l [USERNAME] -c startx
+
+# Make libvirt work again (if needed)
+#systemctl restart libvirtd.service
