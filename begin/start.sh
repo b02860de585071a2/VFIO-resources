@@ -7,10 +7,7 @@ set -x
 
 # Stop X
 pkill -15 Xorg
-
-# Daemon: "You'll have to pry nvidia_modeset from my cold, dead hands."
-# Me: "So be it."
-systemctl stop nvidia-persistenced.service
+pkill -15 kitty
 
 # Unbind framebuffer (this method seems to work better than 'echo $text > $file')
 echo efi-framebuffer.0 | sudo tee /sys/bus/platform/drivers/efi-framebuffer/unbind
