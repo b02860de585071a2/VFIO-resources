@@ -1,10 +1,12 @@
 # VFIO-resources
 This is a small collection of some of the libvirt hooks and automation scripts I've written for my primary VFIO virtual machine.
 
+NOTE: There is a high probability of this repo being outdated. If you have questions about anything listed here, open an issue or contact me directly. I try to keep it up-to-date, but there are a lot of minor optimizations that might be forgotten. 
+
 ## Specs:
-* Host: Debian sid
+* Host: Arch
 * Guest: Win10 LTSC
-* Kernel: 6.0.0-4-amd64 
+* Kernel: 6.0.12.arch1-1
 * Shell: bash 
 * WM: i3
 * DE: none
