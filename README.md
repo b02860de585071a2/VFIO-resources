@@ -12,7 +12,7 @@ NOTE: There is a high probability of this repo being outdated. If you have quest
 * DE: none
 * DM: none
 * CPU: Intel i7-12700KF @ 5.0GHz 
-* GPU: RTX 2070 Super 
+* GPU: RTX 4080
 * Memory: 32GB 
 * Using qemu-kvm (libvirt)
 * Single GPU passthrough
